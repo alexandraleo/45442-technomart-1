@@ -1,0 +1,177 @@
+/** {
+	box-sizing: border-box;
+}*/
+body {
+	min-width: 960px;
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+	font-weight: normal;
+	margin-top: 0;
+
+}
+.container {
+	width: 940px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	outline: 2px solid green;
+}
+
+									/*Header*/
+/*header {
+		background-color: #293449;
+}*/
+.store-navigation {
+	background-color: #293449;
+	color: #ffffff;
+	font-size: 17px;
+	line-height: 18px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.store-navigation a {
+	text-decoration: none;
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	width: 150px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+}
+.store-navigation .logo {
+	font-size: 24px;
+	line-height: 24px;
+	background-color: #ee3643;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	width: 220px;
+}
+.store-navigation .nav-order {
+	background-color: #63a63e;
+}
+.store-navigation .nav-basket {
+	background-color: #ee3643;
+}
+.store-navigation .nav-search {
+	border: none;
+	outline: none;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: #293449;
+	color: #ffffff;
+	font-size: 17px;
+	line-height: 18px;
+	width: 260px;
+	text-align: left;
+	margin-right: 10px;
+}
+.store-navigation a:hover, .store-navigation .nav-search:hover {
+	background-color: #212a3a;
+}
+.store-navigation .nav-order:hover {
+	background-color: #5fbb2d;
+}
+.store-navigation .logo:hover, .store-navigation  .nav-basket:hover {
+	background-color: #ca2c37;
+}
+.store-navigation a:active {
+	background-color: #161d29;
+}
+.store-navigation .nav-order:active {
+	background-color: #518534;
+}
+.store-navigation .logo:active, .store-navigation  .nav-basket:active {
+	background-color: #ba2732;
+}
+.store-navigation .nav-search:focus, .store-navigation .nav-search:active {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+									/*Сложный фильтр по цене*/
+.price-controls {
+  position: relative;
+  display: block;
+  height: 32px;
+  margin-left: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  font-size: 0;
+}
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+}
+.price-controls label {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 32px;
+  vertical-align: top;
+  cursor: pointer;
+}
+.price-controls .min-price {
+  width: 90px;
+  padding-left: 65px;
+}
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 58px;
+}
+.price-controls input {
+  width: 50px;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+	display: block;
+	margin-left: 12px;
+}
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+.range-toggle:hover {
+  background: #1c4f80;
+}
+.range-toggle-min {
+  left: 0;
+}
+.range-toggle-max {
+  left: 80%;
+}
