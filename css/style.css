@@ -1,7 +1,10 @@
-/** {
+* {
 	box-sizing: border-box;
-}*/
+}
 body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	min-width: 960px;
 	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-size: 18px;
@@ -17,13 +20,29 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	outline: 2px solid green;
+	align-items: stretch;
+/*	outline: 2px solid green;*/
 }
 
 									/*Header*/
-/*header {
-		background-color: #293449;
-}*/
+header {
+	background-color: #f1f5f7;
+}
+main {
+	width: 100%;
+	background-color: #fff;
+}
+footer, .navigation {
+	background-color: #32425c;
+}
+.bg-container {
+	width: 100%;
+	background-color: #293449;
+}
+.bg-services {
+	width: 100%;
+	background-color: #f1f5f7;	
+}
 .store-navigation {
 	background-color: #293449;
 	color: #ffffff;
@@ -50,6 +69,7 @@ body {
 	padding-top: 9px;
 	padding-bottom: 9px;
 	width: 220px;
+	box-shadow: 0px 5px 0px 0px #b52933;
 }
 .store-navigation .nav-order {
 	background-color: #63a63e;
@@ -92,6 +112,37 @@ body {
 	background-color: #ffffff;
 	color: #000000;
 }
+.navigation {
+		box-shadow: 0px 5px 0px 0px #293449;
+		margin-bottom: 60px;
+}
+.navigation ul {
+	display: flex;
+	margin: 0;
+	padding: 0 30px;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+}
+.navigation li {
+	list-style: none;
+	margin: 0;
+}
+.navigation a {
+	padding: 19px 30px;
+	text-decoration: none;
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	color: #fff;
+	font-size: 17px;
+	line-height: 17px;
+}
+.navigation a:hover {
+	background-color: #293449;
+}
+.navigation a:active {
+	background-color: #1d2739;
+}
+
 
 									/*Сложный фильтр по цене*/
 .price-controls {
