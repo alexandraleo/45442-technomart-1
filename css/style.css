@@ -142,8 +142,88 @@ footer, .navigation {
 .navigation a:active {
 	background-color: #1d2739;
 }
+.store-info {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-basis: 100%;
+	flex-direction: row;
+	justify-content: stretch;
+	align-items: center;
+	flex-wrap: nowrap;
+}
+.contacts {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 340px;
+}
+.summary {
+	margin: 0;
+	width: 300px;
+	color: #ee3643;
+	font-style: italic;
+	font-size: 16px;
+	line-height: 23px;
+	padding: 50px 50px 40px;
+	outline: 1px solid red;
+}
+.phone {
+	margin: 0;
+	width: 270px;
+	color: #e9292a;
+	font-size: 21px;
+	line-height: 21px;
+	padding: 9px 50px 9px 70px;
+	border: 3px solid #fff;
+}
+.address {
+	color: #32425c;
+	font-size: 14px;
+	line-height: 24px;
+	margin: 0;
+	margin-top: 12px;
+}
+.account {
+	width: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+.account a {
+	background-color: #fff;
+	color: #000;
+	font-size: 21px;
+	line-height: 21px;
+	padding: 12px 25px;
+	text-decoration: none;
+}
+.account a:first-child {
+	margin-right: 10px;
+	padding-left: 48px;
+}
 
-
+.slider-block {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: space-between;
+	flex-wrap: wrap;
+}
+.advantage {
+	width: 300px;
+	height: 123px;
+	outline: 1px green solid;
+	margin-bottom: 20px;
+}
+.slider {
+	width: 620px;
+	height: 280px;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 2;
+}
 									/*Сложный фильтр по цене*/
 .price-controls {
   position: relative;
