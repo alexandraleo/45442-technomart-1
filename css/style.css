@@ -66,7 +66,8 @@ footer, .navigation {
 	font-size: 24px;
 	line-height: 24px;
 	background-color: #ee3643;
-	padding-top: 9px;
+	text-transform: uppercase;
+	padding-top: 10px;
 	padding-bottom: 9px;
 	width: 220px;
 	box-shadow: 0px 5px 0px 0px #b52933;
@@ -114,7 +115,7 @@ footer, .navigation {
 }
 .navigation {
 		box-shadow: 0px 5px 0px 0px #293449;
-		margin-bottom: 60px;
+		margin-bottom: 65px;
 }
 .navigation ul {
 	display: flex;
@@ -148,25 +149,26 @@ footer, .navigation {
 	display: flex;
 	flex-basis: 100%;
 	flex-direction: row;
-	justify-content: stretch;
-	align-items: center;
+	justify-content: space-between;
+	align-items: stretch;
 	flex-wrap: nowrap;
 }
 .contacts {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	flex-basis: 340px;
+	justify-content: stretch;
+	align-items: flex-start;
+	flex-basis: 300px;
+	padding-top: 46px;
 }
 .summary {
 	margin: 0;
-	width: 300px;
+	flex-basis: 300px;
 	color: #ee3643;
 	font-style: italic;
 	font-size: 16px;
 	line-height: 23px;
-	padding: 50px 50px 40px;
+	padding: 48px 50px 40px;
 	outline: 1px solid red;
 }
 .phone {
@@ -183,13 +185,16 @@ footer, .navigation {
 	font-size: 14px;
 	line-height: 24px;
 	margin: 0;
-	margin-top: 12px;
+	margin-top: 4px;
+	padding-left: 10px;
 }
 .account {
 	width: 300px;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-end;
+	padding-top: 46px;
+	padding-bottom: 67px;
 }
 .account a {
 	background-color: #fff;
@@ -205,25 +210,161 @@ footer, .navigation {
 }
 
 .slider-block {
+	width: 940px;
+	height: 410px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-content: space-between;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
+	margin-top: 58px;
+	margin-bottom: 53px;
 }
 .advantage {
 	width: 300px;
 	height: 123px;
-	outline: 1px green solid;
+/* 	outline: 1px solid green; */
 	margin-bottom: 20px;
+	flex-shrink: 0;
+/* 	padding: 22px 20px 26px 22px; */
+	display: flex;
+	flex-direction: row;
+	justify-content: stretch;
+	align-items: stretch;
 }
-.slider {
-	width: 620px;
-	height: 280px;
+.advantage div:first-child {
+	width: 160px;
+	padding-top: 20px;
+	padding-left: 23px;
+	padding-bottom: 23px;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.advantage p {
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	color: #fff;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 30px;
+	margin: 0;
+	margin-bottom: 15px;
+}
+.advantage-btn {
+	min-width: 135px;
+	background-color: rgba(0, 0, 0, .1);
+	text-decoration: none;
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 24px;
+	padding-right: 20px;
+	border-radius: 3px;
+}
+.advantage-btn:hover {
+	background-color: rgba(0, 0, 0, .2);
+}
+.advantage-btn:active {
+	background-color: rgba(0, 0, 0, .3);
+}
+.advantage-img {
+	width: 140px;
+/* 	align-self: center; */
+	display: flex;
+}
+.advantage-img img {
+	margin: auto;
+}
+.slider {
+	flex-basis: 620px;
+	height: 266px;
+	display: flex;
+	flex-direction: column;
+	outline: 1px solid red;
 	flex-grow: 2;
 }
+.left-slider-part {
+	width: 620px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.right-slider-part {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.left-slider-part .advantage:first-child {
+	background-color: #f6b22d;
+}
+.left-slider-part .advantage:nth-child(2) {
+	background-color: #4aafde;
+}
+.right-slider-part .advantage:first-child {
+	background-color: #cc79d1;
+}
+.right-slider-part .advantage:nth-child(2) {
+	background-color: #85d179;
+}
+.right-slider-part .advantage:last-child {
+	background-color: #f6b22d;
+}
+.popular-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: #f7f3ec;
+	padding-right: 24px;
+	margin-bottom: 20px;
+}
+.popular-header h2 {
+	font-size: 30px;
+	line-height: 30px;
+	color: #32425c;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 30px;
+}
+.popular-header a {
+	width: 253px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 14px;
+	line-height: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #ee3643;
+	text-align: center;
+	border-radius: 3px;
+	margin-top: 25px;
+	margin-bottom: 26px;
+}
+.products {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+}
+.products .item {
+	width: 220px;
+	height: 318px;
+	outline: 1px solid green;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
 									/*Сложный фильтр по цене*/
 .price-controls {
   position: relative;
