@@ -348,12 +348,14 @@ footer, .navigation {
 	border-radius: 3px;
 	margin-top: 25px;
 	margin-bottom: 26px;
+	align-self: flex-end;
 }
 .products {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: stretch;
+	margin-bottom: 20px;
 }
 .products .item {
 	width: 220px;
@@ -364,8 +366,31 @@ footer, .navigation {
 	justify-content: space-between;
 	align-items: center;
 }
+.producers {
+	display: flex;
+	flex-direction: row;
+ 	flex-wrap: wrap; 
+	justify-content: space-between;
+ 	align-content: space-between; 
+}
+.producers .poducer-logo {
+	width: 220px;
+	height: 145px;
+	display: flex;
+	border: 1px solid #e5e5e5;
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.producer-logo img {
+	margin: 0 auto;
+
+}
+ 
 
 									/*Сложный фильтр по цене*/
+}
 .price-controls {
   position: relative;
   display: block;
