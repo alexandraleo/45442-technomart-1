@@ -34,43 +34,31 @@ body {
 .icon {
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
-    display: block;
-}
-
-.icon-user {
-    width: 20px;
-    height: 18px;
-    background-position: -5px -5px;
+    display: inline-flex;
 }
 
 .icon-basket {
     width: 17px;
     height: 16px;
-    background-position: -35px -5px;
+    background-position: -5px -5px;
 }
 
 .icon-bookmark {
     width: 14px;
     height: 16px;
-    background-position: -62px -5px;
-}
-
-.icon-can {
-    width: 44px;
-    height: 65px;
-    background-position: -86px -5px;
+    background-position: -32px -5px;
 }
 
 .icon-check-off {
     width: 23px;
     height: 23px;
-    background-position: -140px -5px;
+    background-position: -56px -5px;
 }
 
 .icon-check-on {
     width: 27px;
     height: 23px;
-    background-position: -173px -5px;
+    background-position: -89px -5px;
 }
 
 .icon-circle {
@@ -85,102 +73,77 @@ body {
     background-position: -40px -38px;
 }
 
-.icon-delivery {
-    width: 78px;
-    height: 63px;
-    background-position: -5px -80px;
-}
-
 .icon-down-dir {
     width: 11px;
     height: 10px;
-    background-position: -140px -38px;
-}
-
-.icon-drill {
-    width: 75px;
-    height: 61px;
-    background-position: -140px -58px;
+    background-position: -75px -38px;
 }
 
 .icon-facebook {
     width: 10px;
     height: 18px;
-    background-position: -93px -129px;
-}
-
-.icon-goods {
-    width: 59px;
-    height: 72px;
-    background-position: -113px -129px;
+    background-position: -96px -38px;
 }
 
 .icon-home {
     width: 15px;
     height: 12px;
-    background-position: -182px -129px;
+    background-position: -75px -66px;
 }
 
 .icon-instagram {
     width: 17px;
     height: 17px;
-    background-position: -182px -151px;
+    background-position: -100px -66px;
 }
 
 .icon-left {
     width: 22px;
     height: 40px;
-    background-position: -210px -5px;
+    background-position: -126px -5px;
 }
 
 .icon-login {
     width: 20px;
     height: 17px;
-    background-position: -225px -55px;
-}
-
-.icon-new {
-    width: 60px;
-    height: 59px;
-    background-position: -5px -178px;
+    background-position: -127px -55px;
 }
 
 .icon-phone {
     width: 19px;
     height: 19px;
-    background-position: -93px -82px;
+    background-position: -5px -82px;
 }
 
 .icon-right {
     width: 22px;
     height: 40px;
-    background-position: -225px -82px;
+    background-position: -34px -82px;
 }
 
 .icon-search {
     width: 17px;
     height: 17px;
-    background-position: -209px -132px;
-}
-
-.icon-tractor {
-    width: 78px;
-    height: 62px;
-    background-position: -255px -5px;
+    background-position: -127px -82px;
 }
 
 .icon-up-dir {
     width: 11px;
     height: 10px;
-    background-position: -257px -77px;
+    background-position: -66px -109px;
+}
+
+.icon-user {
+    width: 20px;
+    height: 18px;
+    background-position: -87px -109px;
 }
 
 .icon-vk {
     width: 20px;
     height: 12px;
-    background-position: -278px -77px;
+    background-position: -117px -109px;
 }
-
 
 									/*Header*/
 header {
@@ -421,13 +384,126 @@ footer, .navigation {
 .advantage-btn:active {
 	background-color: rgba(0, 0, 0, .3);
 }
-.slides {
-	flex-basis: 620px;
+.slider {
+	position: relative;
+	width: 620px;
 	height: 266px;
 	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	color: #fff;
+	background-color: #f2f6f8;
+}
+.slider input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+.previous-slide span {
+	position: absolute;
+	top: 114px;
+	left: 22px;
+	z-index: 100;
+}
+.next-slide span {
+	position: absolute;
+	top: 114px;
+	right: 22px;
+	z-index: 100;
+}
+.slider-controls {
+	position: absolute;
+	width: 140px;
+	height: 25px;
+	left: 240px;
+	bottom: 30px;
+	text-align: center;
+	z-index: 100;
+}
+.slider-controls label {
+	display: inline-flex;
+	background-color: #fff;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	text-align: center;
+	vertical-align: middle;
+}
+.slider-controls label:first-child {
+		margin-right: 10px;
+}
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+	background-color: #ee3643;
+}
+.slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
 	flex-direction: column;
-	outline: 1px solid red;
-	flex-grow: 2;
+	justify-content: space-between;
+	align-content: flex-start;
+	flex-shrink: 0;
+	padding: 26px 22px 22px 22px;
+	overflow: hidden;
+}
+.slides {
+	display: flex;
+	width: 100%;
+}
+.slide:first-child {
+	background: #6a5947 url("../img/perfman.jpg") no-repeat;
+}
+.slide:nth-child(2) {
+	background: #6a5947 url("../img/drillman.jpg") no-repeat;
+}
+.slide {
+	display: none;
+} 
+#btn-1:checked ~ .slides .slide:first-child {
+	display: flex;
+	order: 0;
+}
+#btn-2:checked ~ .slides .slide:nth-child(2) {
+	display: flex;
+		order: 0;
+}
+.slide-header {
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #fff;
+	margin: 0;
+	margin-bottom: 8px;
+	padding: 0;
+}
+.slide-subheader {
+	font-family: 'Pt Sans', 'Arial', sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: normal;
+	color: #fff;
+	margin: 0;
+	padding: 0;	
+}
+.slide-btn {
+	width: 195px;
+	background-color: #ee3643;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 10px;
+	border-radius: 3px;
 }
 .left-slider-part {
 	width: 620px;
