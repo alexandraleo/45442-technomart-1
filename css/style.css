@@ -961,11 +961,11 @@ footer, .navigation {
 	text-decoration: none;
 }
 .services {
-	/*background-color: #f1f5f7;*/
+	background-color: #f1f5f7;
 	padding-left: calc((100% - 940px) / 2);
 	padding-right: calc((100% - 940px) / 2);
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-wrap: wrap;
@@ -993,14 +993,18 @@ footer, .navigation {
 	flex-grow: 1;
 	flex-shrink: 0;
 }
+.services-slider {
+	display: flex;
+	flex-wrap: nowrap;
+}
 .services-navigation {
 	width: 240px;
+	margin-top: 70px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: stretch;
-	margin-top: 70px;
 	padding-bottom: 102px;
 }
 .services-navigation::after {
@@ -1030,9 +1034,9 @@ footer, .navigation {
 .services-navigation label:hover {
 	background-color: #293449;
 }
-#serv-1:checked ~ label[for="serv-1"],
-#serv-2:checked ~ label[for="serv-2"],
-#serv-3:checked ~ label[for="serv-3"] {
+#serv-1:checked ~ .services-navigation label[for="serv-1"],
+#serv-2:checked ~ .services-navigation label[for="serv-2"],
+#serv-3:checked ~ .services-navigation label[for="serv-3"] {
 	background-color: #fff;
 	color: #32425c;
 	box-shadow: 0px 1px 0px 0px #fff,
@@ -1042,29 +1046,27 @@ footer, .navigation {
 	width: 700px;
 	height: 285px;
 	position: relative;
-	outline: 2px solid red;
-	z-index: 0;
 	margin-top: 70px;
 	display: flex;
-	flex-direction: column;
+	background-color: #ccc;
 }
-.services-navigation input[type="radio"] {
+.services-slider input[type="radio"] {
 	position: absolute;
 	opacity: 0;
 }
-.service-slide {
-	display: none;
+.services-slides .service-slide {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 700px;
 	height: 285px;
-	display: flex;
+	display: none;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
-	outline: 1px solid green;
 	padding-left: 80px;
+	flex-shrink: 0;
+	overflow: hidden;
 }
 .service-slide p {
 	margin: 0;
@@ -1080,12 +1082,10 @@ footer, .navigation {
 .credit {
 	background: #f1f5f7 url("../img/credit.png") right bottom no-repeat;
 }
-#serv-1:checked ~ .services-slides .delivery {
-	display: flex;
-}
-#serv-2:checked ~ .services-slides .guarantee {
-	display: flex;
-}
+
+.services #serv-1:checked ~ .services-slides .delivery,
+#serv-2:checked ~ .services-slides .guarantee,
 #serv-3:checked ~ .services-slides .credit {
 	display: flex;
+	z-index: 10;
 }
