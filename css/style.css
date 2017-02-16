@@ -31,11 +31,9 @@ body {
 }
 									/* Icons */
 .icon {
-    background-image: url("../img/sprite.png");
+    background-image: url(../img/sprite.png);
     background-repeat: no-repeat;
-    display: inline-flex;
-    /*text-align: center;
-    vertical-align: middle;*/
+    display: block;
 }
 
 .icon-basket {
@@ -48,10 +46,6 @@ body {
     width: 14px;
     height: 16px;
     background-position: -32px -5px;
-    padding: 0;
-    padding-top: 12px;
-    padding-bottom: 14px;
-    margin: 0;
 }
 
 .icon-check-off {
@@ -132,23 +126,30 @@ body {
     background-position: -127px -82px;
 }
 
+.icon-search-red {
+    width: 17px;
+    height: 17px;
+    background-position: -66px -109px;
+}
+
 .icon-up-dir {
     width: 11px;
     height: 10px;
-    background-position: -66px -109px;
+    background-position: -93px -109px;
 }
 
 .icon-user {
     width: 20px;
     height: 18px;
-    background-position: -87px -109px;
+    background-position: -114px -109px;
 }
 
 .icon-vk {
     width: 20px;
     height: 12px;
-    background-position: -117px -109px;
+    background-position: -5px -137px;
 }
+
 
 									/*Header*/
 header {
@@ -165,29 +166,18 @@ footer, .navigation {
 	display: flex;
 	height: 42px;
 	width: 100%;
-	background-color: #293449;
-	padding: 0;
-	margin: 0;
-
 }
 .store-navigation {
+	display: flex;
 	background-color: #293449;
 	color: #ffffff;
 	font-size: 17px;
 	line-height: 18px;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-.store-navigation a {
-	text-decoration: none;
-	color: inherit;
-	font-size: inherit;
-	line-height: inherit;
-	width: 150px;
-	padding-top: 12px;
-	padding-bottom: 12px;
-	text-align: center;
+	justify-content: stretch;
+	align-items: stretch;
+	padding-left: calc((100% - 940px) / 2);
+	padding-right: calc((100% - 940px) / 2);
 }
 .store-navigation .logo,
 .footer-navigation .logo {
@@ -204,28 +194,111 @@ footer, .navigation {
 	width: 220px;
 	box-shadow: 0px 5px 0px 0px #b52933;
 }
+.searching-form {
+	position: relative;
+	width: 270px;
+}
+.searching-form .nav-search {
+	position: relative;
+	width: 100%;
+	height: 42px;
+	margin: 0;
+	border: none;
+	outline: none;
+	background-color: #293449;
+}
+.searching-form label[for="search"] {
+	position: absolute;
+	width: 270px;
+	height: 42px;
+	top: 0;
+	left: 0;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 50px;
+	color: #fff;
+	font-size: 17px;
+	line-height: 18px;
+	text-align: left;
+	background-color: rgba(41, 52, 73, 0.3);
+}
+.store-navigation a {
+	position: relative;
+	text-decoration: none;
+	color: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	width: 150px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	/*flex-shrink: 0;
+	flex-grow: 1;*/
+}
+.store-navigation .navigation-icon {
+	padding-left: 50px;
+}
+.navigation-icon::before {
+	position: absolute;
+	content: "";
+	width: 50px;
+	height: 42px;
+	top: 12px;
+	left: 17px;
+	background-image: url("../img/sprite.png");
+	background-repeat: no-repeat;
+}
+.searching-form:before {
+	position: absolute;
+	content: "";
+	width: 50px;
+	height: 42px;
+	top: 0;
+	left: 0;
+	background: #fff url("..img/search-red.png") 0 0 no-repeat;
+}
+.store-navigation .search-icon::before {
+	width: 17px;
+	height: 17px;
+	background-position: -127px -82px;
+}
+.store-navigation .bookmark-icon::before {
+	width: 14px;
+	height: 16px;
+	background-position: -32px -5px;
+}
+.store-navigation .basket-icon::before {
+	width: 17px;
+	height: 16px;
+	background-position: -5px -5px;
+}
+.searching-form {
+	background-color: #fff;
+}
+.search-red {
+	background: #fff url("..img/search-red.png") 0 0 no-repeat;
+}
 .store-navigation .nav-order {
 	background-color: #63a63e;
 }
 .store-navigation .nav-basket {
 	background-color: #ee3643;
 }
-.store-navigation .nav-search {
-	border: none;
-	outline: none;
-	padding-top: 12px;
-	padding-bottom: 12px;
-	background-color: #293449;
-	color: #ffffff;
-	font-size: 17px;
-	line-height: 18px;
-	width: 260px;
-	text-align: left;
-	margin-right: 10px;
+.store-navigation .nav-search:focus,
+.store-navigation .nav-search:active {
+	padding-left: 50px;
+	background-color: transparent;;
+	color: #000000;
 }
-.store-navigation a:hover, .store-navigation .nav-search:hover {
+
+.store-navigation .nav-search:focus ~ label[for="search"] {
+	display: none;
+}
+.store-navigation a:hover,
+.store-navigation label[for="search"]:hover {
 	background-color: #212a3a;
 }
+
 .store-navigation .nav-order:hover {
 	background-color: #5fbb2d;
 }
@@ -246,13 +319,18 @@ footer, .navigation {
 .footer-navigation .logo:active {
 	background-color: #ba2732;
 }
-.store-navigation .nav-search:focus, .store-navigation .nav-search:active {
-	background-color: #ffffff;
-	color: #000000;
+.order-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: flrx-end;
+	align-items: stretch;
 }
+
 .navigation {
 		box-shadow: 0px 5px 0px 0px #293449;
 		margin-bottom: 65px;
+		margin-left: calc((100% - 940px) / 2);
+		margin-right: calc((100% - 940px) / 2);
 }
 .navigation ul {
 	display: flex;
@@ -289,6 +367,8 @@ footer, .navigation {
 	justify-content: space-between;
 	align-items: stretch;
 	flex-wrap: nowrap;
+	padding-left: calc((100% - 940px) / 2);
+	padding-right: calc((100% - 940px) / 2);
 }
 .contacts {
 	display: flex;
@@ -937,7 +1017,7 @@ footer, .navigation {
 .social-btn-vk::before {
 	width: 20px;
 	height: 12px;
-	background-position: -117px -109px;
+	background-position: -5px -137px;
 }
 .social-btn-fb::before {
 	width: 10px;
@@ -1070,6 +1150,9 @@ footer, .navigation {
 }
 .service-slide p {
 	margin: 0;
+}
+.service-slide h2 {
+	color: #32425c;
 }
 .delivery {
 	background: #f1f5f7 url("../img/car.png") right bottom no-repeat;
