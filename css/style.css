@@ -1061,7 +1061,8 @@ footer, .navigation {
 	margin: 0;
 	padding-bottom: 30px;
 }
-.services p {
+.services p,
+.about p {
 	color: #000;
 	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 13px;
@@ -1171,4 +1172,22 @@ footer, .navigation {
 #serv-3:checked ~ .services-slides .credit {
 	display: flex;
 	z-index: 10;
+}
+.about ul {
+	margin: 0;
+	padding: 0;
+	padding-left: 36px;
+}
+.about li {
+	list-style: none;
+	position: relative;
+}
+.about li::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -36px;
+	width: 25px;
+	height: 2px;
+	background-color: #fb565a;
 }
