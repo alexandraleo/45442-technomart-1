@@ -167,6 +167,7 @@ footer, .navigation {
 	height: 42px;
 	width: 100%;
 }
+
 .store-navigation {
 	display: flex;
 	background-color: #293449;
@@ -199,7 +200,6 @@ footer, .navigation {
 	width: 270px;
 }
 .searching-form .nav-search {
-	position: relative;
 	width: 100%;
 	height: 42px;
 	margin: 0;
@@ -213,14 +213,13 @@ footer, .navigation {
 	height: 42px;
 	top: 0;
 	left: 0;
-	/*padding-top: 12px;
-	padding-bottom: 12px;*/
 	padding-left: 50px;
 	color: #fff;
 	font-size: 17px;
 	line-height: 42px;
 	text-align: left;
-	background-color: rgba(41, 52, 73, 0.3);
+	background-color: #293449;
+	opacity: .7;
 }
 .store-navigation a {
 	position: relative;
@@ -264,12 +263,6 @@ footer, .navigation {
 	height: 16px;
 	background-position: -5px -5px;
 }
-.searching-form {
-	background-color: #fff;
-}
-.search-red {
-	background: #fff url("..img/search-red.png") 0 0 no-repeat;
-}
 .store-navigation .nav-order {
 	background-color: #63a63e;
 }
@@ -282,20 +275,25 @@ footer, .navigation {
 	background-color: #fff;
 	color: #000000;
 }
-
 .store-navigation .nav-search:focus ~ label[for="search"] {
 	width: 50px;
 	background-color: #fff;
 	font-size: 0;
 	}
+	.order-buttons .navigation-icon {
+		opacity: .7;
+	}
+	.order-buttons .navigation-icon:hover,
+	label[for="search"]:hover {
+		opacity: 1;
+	}
+	.order-buttons .navigation-icon:active {
+		opacity: .5;
+		background-color: #161d29;
+	}
 .store-navigation .nav-search:focus ~ .search-icon::before{
 	background-position: -66px -109px;
 }
-.store-navigation a:hover,
-.store-navigation label[for="search"]:hover {
-	background-color: #212a3a;
-}
-
 .store-navigation .nav-order:hover {
 	background-color: #5fbb2d;
 }
@@ -303,10 +301,6 @@ footer, .navigation {
 .store-navigation  .nav-basket:hover,
 .footer-navigation .logo:hover {
 	background-color: #ca2c37;
-}
-.store-navigation a:active {
-	background-color: #161d29;
-	color: rgba(255, 255, 255, .6);
 }
 .store-navigation .nav-order:active {
 	background-color: #518534;
@@ -319,7 +313,7 @@ footer, .navigation {
 .order-buttons {
 	display: flex;
 	flex-direction: row;
-	justify-content: flrx-end;
+	justify-content: flex-end;
 	align-items: stretch;
 }
 
@@ -367,6 +361,7 @@ footer, .navigation {
 	padding-left: calc((100% - 940px) / 2);
 	padding-right: calc((100% - 940px) / 2);
 }
+
 .contacts {
 	display: flex;
 	flex-direction: column;
@@ -383,9 +378,12 @@ footer, .navigation {
 	font-size: 16px;
 	line-height: 23px;
 	padding: 48px 50px 40px;
-/*	outline: 1px solid red;*/
 }
-.phone {
+.summary p {
+	margin: 0;
+}
+.store-info .phone {
+	position: relative;
 	margin: 0;
 	width: 270px;
 	color: #e9292a;
@@ -393,6 +391,41 @@ footer, .navigation {
 	line-height: 21px;
 	padding: 9px 50px 9px 70px;
 	border: 3px solid #fff;
+}
+.store-info .phone::before {
+	position: absolute;
+	content: "";
+	width: 19px;
+	height: 19px;
+	top: 11px;
+	left: 13px;
+	background: url("../img/sprite.png") -5px -82px no-repeat;
+}
+.account a {
+	position: relative;
+	color: #000;
+}
+.account .login-icon::before {
+	position: absolute;
+	content: "";
+	width: 20px;
+	height: 17px;
+	top: 14px;
+	left: 14px;
+	background: url("../img/sprite.png") -127px -55px no-repeat;
+	opacity: .5;
+}
+.account a:hover {
+	color: #ee3643;
+}
+.login-icon:hover::before {
+	opacity: 1;
+}
+.account a:active {
+ color: rgba(0, 0, 0, 0.5);
+}
+.login-icon:active::before {
+	opacity: .5;
 }
 .address {
 	color: #32425c;
@@ -652,8 +685,11 @@ footer, .navigation {
 	margin: 0;
 	padding: 30px;
 }
-.popular-header a {
-	width: 253px;
+.popular .universal-btn {
+		width: 253px;
+		align-self: flex-end;
+}
+.universal-btn {
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #fff;
@@ -666,7 +702,6 @@ footer, .navigation {
 	border-radius: 3px;
 	margin-top: 25px;
 	margin-bottom: 26px;
-	align-self: flex-end;
 }
 .products {
 	display: flex;
@@ -1170,6 +1205,26 @@ footer, .navigation {
 	display: flex;
 	z-index: 10;
 }
+.company {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 80px;
+	padding-bottom: 85px;
+	padding-left: calc((100% - 940px) / 2);
+	padding-right: calc((100% - 940px) / 2);
+}
+.about, .map {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.about {
+	width: 540px;
+}
+.map {
+	width: 300px;
+}
 .about ul {
 	margin: 0;
 	padding: 0;
@@ -1187,4 +1242,10 @@ footer, .navigation {
 	width: 25px;
 	height: 2px;
 	background-color: #fb565a;
+}
+.about .universal-btn {
+	width: 220px;
+}
+.map .universal-btn {
+	width: 100%;
 }
