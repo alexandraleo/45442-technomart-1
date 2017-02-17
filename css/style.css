@@ -213,12 +213,12 @@ footer, .navigation {
 	height: 42px;
 	top: 0;
 	left: 0;
-	padding-top: 12px;
-	padding-bottom: 12px;
+	/*padding-top: 12px;
+	padding-bottom: 12px;*/
 	padding-left: 50px;
 	color: #fff;
 	font-size: 17px;
-	line-height: 18px;
+	line-height: 42px;
 	text-align: left;
 	background-color: rgba(41, 52, 73, 0.3);
 }
@@ -235,7 +235,8 @@ footer, .navigation {
 	/*flex-shrink: 0;
 	flex-grow: 1;*/
 }
-.store-navigation .navigation-icon {
+.store-navigation .navigation-icon,
+.nav-search {
 	padding-left: 50px;
 }
 .navigation-icon::before {
@@ -247,15 +248,6 @@ footer, .navigation {
 	left: 17px;
 	background-image: url("../img/sprite.png");
 	background-repeat: no-repeat;
-}
-.searching-form:before {
-	position: absolute;
-	content: "";
-	width: 50px;
-	height: 42px;
-	top: 0;
-	left: 0;
-	background: #fff url("..img/search-red.png") 0 0 no-repeat;
 }
 .store-navigation .search-icon::before {
 	width: 17px;
@@ -287,12 +279,17 @@ footer, .navigation {
 .store-navigation .nav-search:focus,
 .store-navigation .nav-search:active {
 	padding-left: 50px;
-	background-color: transparent;;
+	background-color: #fff;
 	color: #000000;
 }
 
 .store-navigation .nav-search:focus ~ label[for="search"] {
-	display: none;
+	width: 50px;
+	background-color: #fff;
+	font-size: 0;
+	}
+.store-navigation .nav-search:focus ~ .search-icon::before{
+	background-position: -66px -109px;
 }
 .store-navigation a:hover,
 .store-navigation label[for="search"]:hover {
