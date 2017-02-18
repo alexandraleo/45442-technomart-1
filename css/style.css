@@ -374,6 +374,7 @@ footer, .navigation {
 	margin: 0;
 	flex-basis: 300px;
 	color: #ee3643;
+	font-family: 'Cuprum', 'Arial', sans-serif;
 	font-style: italic;
 	font-size: 16px;
 	line-height: 23px;
@@ -1225,6 +1226,12 @@ footer, .navigation {
 .map {
 	width: 300px;
 }
+.about p {
+	margin: 0;
+}
+.about p:first-of-type {
+	margin-bottom: 35px;
+}
 .about ul {
 	margin: 0;
 	padding: 0;
@@ -1233,6 +1240,10 @@ footer, .navigation {
 .about li {
 	list-style: none;
 	position: relative;
+	font-family: 'Cuprum', 'Arial', sans-serif;
+	font-size: 18px;
+	line-height: 20px;
+	margin-bottom: 22px;
 }
 .about li::before {
 	content: "";
@@ -1248,4 +1259,107 @@ footer, .navigation {
 }
 .map .universal-btn {
 	width: 100%;
+}
+.modal-window {
+	display: none;
+	position: fixed;
+	bottom: 200px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 630px;
+	height: 430px;
+	border-top: 7px solid #ee3643;
+	padding-top: 45px;
+	padding-bottom: 37px;
+	background-image: linear-gradient(to bottom, #fff 311px, #f1f1f1 311px, #f1f1f1 112px);
+	z-index: 100;
+	box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75);
+}
+.modal-form {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	margin-left: 80px;
+	margin-right: 80px;
+}
+.modal-form label {
+		font-size: 18px;
+	line-height: 18px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+.modal-form input,
+.modal-form .letter-area {
+	border: 2px solid #d7dcde;
+	border-radius: 3px;
+	color: #999999;
+	padding: 10px;
+	font-family: 'PT Sans', 'Arial', sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	width: 100%;
+	margin-bottom: 20px;
+	vertical-align: top;
+}
+.modal-form fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+	flex-grow: 0;
+}
+.name, .email {
+	width: 220px;
+	margin-bottom: 20px;
+}
+.letter {
+	width: 460px;
+	margin-bottom: 0;
+}
+.letter .letter-area {
+	margin-bottom: 0;
+	padding-top: 10px;
+	padding-left: 10px;
+	height: 114px;
+}
+.modal-window-close {
+	position: absolute;
+	border: 0;
+	top: -35px;
+	right: -50px;
+	width: 21px;
+	height: 21px;
+	font-size: 0;
+	background-color: #fff;
+}
+.modal-window-close::before,
+.modal-window-close::after {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: -2px;
+	width: 27px;
+	height: 5px;
+	background-color: #ee3643;
+}
+.modal-window-close::before {
+	transform: rotate(45deg);
+}
+.modal-window-close::after {
+	transform: rotate(-45deg);
+}
+.modal-form .universal-btn {
+	border: none;
+	outline: none;
+	width: 100%;
+	margin-top: 80px;
+	margin-bottom: 0;
+}
+.new-page {
+	position: static;
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 50%;
 }

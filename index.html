@@ -5,63 +5,64 @@
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
   <title>HTML Academy: Техномарт</title>
 </head>
 
 <body>
   <header>
-      <div class="store-navigation">
-        <a href="index.html" class="logo">Техномарт</a>
-        <form class="searching-form">
-          <input type="search" class="nav-search search-red" id="search">
-          <label for="search" class="navigation-icon search-icon">Поиск:</label>
-        </form>
-        <div class="order-buttons">
-          <a href="#" class="navigation-icon bookmark-icon">Закладки: 0</a>
-          <a href="#" class="navigation-icon basket-icon">Корзина: 0</a>
-          <a href="#" class="nav-order">Оформить заказ</a>
-        </div>
+    <div class="store-navigation">
+      <a href="index.html" class="logo">Техномарт</a>
+      <form class="searching-form">
+        <input type="search" class="nav-search search-red" id="search">
+        <label for="search" class="navigation-icon search-icon">Поиск:</label>
+      </form>
+      <div class="order-buttons">
+        <a href="#" class="navigation-icon bookmark-icon">Закладки: 0</a>
+        <a href="#" class="navigation-icon basket-icon">Корзина: 0</a>
+        <a href="#" class="nav-order">Оформить заказ</a>
       </div>
-      <div class="store-info">
-        <div class="summary">
+    </div>
+    <div class="store-info">
+      <div class="summary">
 
         <p>Интернет-магазин строительных материалов <br>и инструментов для ремонта</p>
-        </div>
-        <div class="contacts">
-          <p class="phone phone-icon">+7 (812) 555-05-55</p>
-          <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-        </div>
-        <div class="account">
-          <a href="#" class="account-icon login-icon">Войти</a>
-          <a href="#">Регистрация</a>
-        </div>
       </div>
-      <nav class="navigation">
-        <ul>
-          <a href="#">
-            <li>Главная</li>
-          </a>
-          <a href="#">
-            <li>Компания</li>
-          </a>
-          <a href="catalog.html">
-            <li>Каталог</li>
-          </a>
-          <a href="#">
-            <li>Новости</li>
-          </a>
-          <a href="#">
-            <li>Спецпредложения</li>
-          </a>
-          <a href="#">
-            <li>Доставка</li>
-          </a>
-          <a href="#">
-            <li>Контакты</li>
-          </a>
-        </ul>
-      </nav>
+      <div class="contacts">
+        <p class="phone phone-icon">+7 (812) 555-05-55</p>
+        <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+      </div>
+      <div class="account">
+        <a href="#" class="account-icon login-icon">Войти</a>
+        <a href="#">Регистрация</a>
+      </div>
+    </div>
+    <nav class="navigation">
+      <ul>
+        <a href="#">
+          <li>Главная</li>
+        </a>
+        <a href="#">
+          <li>Компания</li>
+        </a>
+        <a href="catalog.html">
+          <li>Каталог</li>
+        </a>
+        <a href="#">
+          <li>Новости</li>
+        </a>
+        <a href="#">
+          <li>Спецпредложения</li>
+        </a>
+        <a href="#">
+          <li>Доставка</li>
+        </a>
+        <a href="#">
+          <li>Контакты</li>
+        </a>
+      </ul>
+    </nav>
   </header>
   <main>
     <div class="container">
@@ -281,8 +282,26 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <img src="img/map.jpg" width="300" height="158" alt="Большая Конюшенная ул., д.19">
-        <a href="#" class="universal-btn">Заблудились? Напишите нам!</a>
+        <a href="modal-form.html" class="universal-btn" target="_blank">Заблудились? Напишите нам!</a>
       </section>
+    </section>
+    <section class="modal-window" data-tag="close">
+      <form class="modal-form" action="index.html" method="post">
+        <a href="#" class="modal-window-close">Закрыть окно</a>
+        <fieldset class="name">
+          <label for="name">Ваше имя:</label>
+          <input type="text" name="name" value="Представьтесь, пожалуйста" id="name">
+        </fieldset>
+        <fieldset class="email">
+        <label for="email">Ваш e-mail:</label>
+        <input type="email" name="email" value="Для отправки ответа" id="email">
+        </fieldset>
+        <fieldset class="letter">
+          <label for="letter">Текст письма:</label>
+          <textarea name="letter" id="letter" class="letter-area" rows="6">В свободной форме</textarea>
+        </fieldset>
+        <button type="submit" name="button" class="universal-btn">Отправить</button>
+      </form>
     </section>
   </main>
   <footer>
