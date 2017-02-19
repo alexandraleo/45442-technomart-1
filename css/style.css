@@ -902,6 +902,7 @@ footer, .navigation {
 	width: 17px;
 	height: 16px;
 }
+
 .item-buttons .bookmark-btn {
 	color: #32425c;
 	background-color: #fff;
@@ -1726,7 +1727,12 @@ footer, .navigation {
 	display: flex;
 	flex-direction: column;
 }
-.filter legend {
+.producer-filter input[type="checkbox"],
+.charging-filter input[type="radio"] {
+	display: none;
+}
+.producer-filter legend,
+.charging-filter legend {
 	font-family: 'Pt Sans', 'Arial', sans-serif;
 	font-size: 17px;
 	line-height: 32px;
@@ -1735,8 +1741,59 @@ footer, .navigation {
 	padding: none;
 	margin: 0;
 }
+.filtering label {
+	position: relative;
+	font-family: 'Pt Sans', 'Arial', sans-serif;
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #000;
+	margin-bottom: 5px;
+	padding: 5px 0 5px 15px;
+	padding-left: 35px;
+}
+.producer-filter label::before,
+.charging-filter label::before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	background-image: url("../img/sprite.png");
+	background-repeat: no-repeat;
+}
+.producer-filter label::before {
+	width: 23px;
+	height: 23px;
+	background-position: -56px -5px;
+}
+input[type="checkbox"]:checked + label::before {
+    width: 27px;
+    height: 23px;
+    background-position: -89px -5px;
+}
+.charging-filter label::before {
+    width: 25px;
+    height: 25px;
+    background-position: -5px -38px;
+}
+input[type="radio"]:checked + label::before {
+    width: 25px;
+    height: 25px;
+    background-position: -40px -38px;
+}
 .filter button {
-	
+	border: 2px solid #e5e5e5;
+	background-color: #fff;
+	border-radius: 3px;
+	width: 135px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: 'Pt Sans', 'Arial', sans-serif;
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: normal;
+	text-transform: uppercase;
 }
 /*Сложный фильтр по цене*/
 .price-controls {

@@ -79,7 +79,7 @@
         <aside class="filter">
           <p>Фильтр:</p>
           <form>
-            <fieldset>
+            <fieldset class="price-filter">
               <legend>Цена:</legend>
               <div class="price-controls">
                 <label class="min-price">От
@@ -99,31 +99,23 @@
             </fieldset>
             <fieldset class="producer-filter">
               <legend>Производители:</legend>
-              <label>
-  							<input type="checkbox" name="bosch">Bosch
-  						</label>
-              <label>
-  							<input type="checkbox" name="inter">
-  							Интерскол
-  						</label>
-              <label>
-  							<input type="checkbox" name="makita">
-  							Makita
-  						</label>
-              <label>
-  							<input type="checkbox" name="dewalt">
-  							Dewalt
-  						</label>
-              <label>
-  							<input type="checkbox" name="hitachi">
-  							Hitachi
-  						</label>
+              <input type="checkbox" name="producer" id="Bosch" checked>
+              <label for="Bosch">Bosch</label>
+              <input type="checkbox" name="producer" id="Inter">
+              <label for="Inter">Интерскол</label>
+  						<input type="checkbox" name="producer" id="Makita" checked>
+              <label for="Makita">Makita</label>
+              <input type="checkbox" name="producer" id="Dewalt">
+              <label for="Dewalt">Dewalt</label>
+              <input type="checkbox" name="producer" id="Hitachi">
+              <label for="Hitachi">Hitachi</label>
             </fieldset>
             <fieldset class="charging-filter">
               <legend>Питание</legend>
-              <label><input type="radio" name="battery">Аккумуляторные</label>
-              <label><input type="radio" name="net">
-  						Сетевые</label>
+              <input type="radio" id="battery" name="charge" checked>
+              <label for="battery">Аккумуляторные</label>
+              <input type="radio" id="net" name="charge">
+              <label for="net">Сетевые</label>
             </fieldset>
             <button type="submit">Показать</button>
           </form>
