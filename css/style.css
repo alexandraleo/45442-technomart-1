@@ -1438,90 +1438,6 @@ footer, .navigation {
 .developer p, .feedback p {
 	margin-bottom: -3px;
 }
-
-									/*Сложный фильтр по цене*/
-.price-controls {
-  position: relative;
-  display: block;
-  height: 32px;
-  margin-left: 12px;
-  margin-bottom: 20px;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
-  font-size: 0;
-}
-.price-controls::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 2px;
-  height: 22px;
-  background: #ffffff;
-}
-.price-controls label {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 14px;
-  line-height: 32px;
-  vertical-align: top;
-  cursor: pointer;
-}
-.price-controls .min-price {
-  width: 90px;
-  padding-left: 65px;
-}
-.price-controls .max-price {
-  width: 90px;
-  padding-left: 58px;
-}
-.price-controls input {
-  width: 50px;
-  margin: 0;
-  color: inherit;
-  font: inherit;
-  background: none;
-  border: none;
-  outline: none;
-}
-.range-controls {
-  position: relative;
-  margin-bottom: 32px;
-	display: block;
-	margin-left: 12px;
-}
-.range-controls .scale {
-  height: 2px;
-  background: rgba(255, 255, 255, 0.3);
-}
-.range-controls .bar {
-  width: 80%;
-  height: 2px;
-  background: #ffffff;
-}
-.range-toggle {
-  position: absolute;
-  top: -9px;
-  width: 4px;
-  height: 4px;
-  background: #ababab;
-  border: 8px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-  cursor: pointer;
-}
-.range-toggle:hover {
-  background: #1c4f80;
-}
-.range-toggle-min {
-  left: 0;
-}
-.range-toggle-max {
-  left: 80%;
-}
-
 														/*Breadcrumbs*/
 .breadcrumbs ul {
 	margin: 0;
@@ -1632,10 +1548,6 @@ footer, .navigation {
 	justify-content: space-between;
 	align-items: stretch;
 }
-.filtering .filter {
-	width: 220px;
-	flex-grow: 0;
-}
 .filtering .filter-results {
 	display: flex;
 	flex-direction: column;
@@ -1670,7 +1582,8 @@ footer, .navigation {
 	margin-bottom: 18px;
 }
 .sorting,
-.sorting p {
+.sorting p,
+.filter p {
 	font-family: 'Pt Sans', 'Arial', sans-serif;
 	font-size: 13px;
 	line-height: 18px;
@@ -1782,4 +1695,128 @@ footer, .navigation {
 .panavigation .next {
 	padding-left: 30px;
 	padding-right: 30px;
+}
+.filtering .filter {
+	width: 220px;
+	flex-grow: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.filter p {
+	width: 100%;
+	padding-top: 11px;
+	padding-bottom: 10px;
+	padding-left: 19px;
+	background-color: #f7f3ec;
+	border-radius: 3px;
+	margin-bottom: 18px;
+}
+.filtering fieldset {
+	width: 220px;
+	border: none;
+	outline: 1px solid green;
+	padding: none;
+	margin: none;
+	margin-bottom: 20px;
+}
+.producer-filter,
+.charging-filter {
+	display: flex;
+	flex-direction: column;
+}
+.filter legend {
+	font-family: 'Pt Sans', 'Arial', sans-serif;
+	font-size: 17px;
+	line-height: 32px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: none;
+	margin: 0;
+}
+.filter button {
+	
+}
+/*Сложный фильтр по цене*/
+.price-controls {
+position: relative;
+display: block;
+height: 32px;
+margin-left: 12px;
+margin-bottom: 20px;
+border: 2px solid #ffffff;
+border-radius: 2px;
+font-size: 0;
+}
+.price-controls::after {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+width: 2px;
+height: 22px;
+background: #ffffff;
+}
+.price-controls label {
+display: inline-block;
+vertical-align: top;
+font-size: 14px;
+line-height: 32px;
+vertical-align: top;
+cursor: pointer;
+}
+.price-controls .min-price {
+width: 90px;
+padding-left: 65px;
+}
+.price-controls .max-price {
+width: 90px;
+padding-left: 58px;
+}
+.price-controls input {
+width: 50px;
+margin: 0;
+color: inherit;
+font: inherit;
+background: none;
+border: none;
+outline: none;
+}
+.range-controls {
+position: relative;
+margin-bottom: 32px;
+display: block;
+margin-left: 12px;
+}
+.range-controls .scale {
+height: 2px;
+background: rgba(255, 255, 255, 0.3);
+}
+.range-controls .bar {
+width: 80%;
+height: 2px;
+background: #ffffff;
+}
+.range-toggle {
+position: absolute;
+top: -9px;
+width: 4px;
+height: 4px;
+background: #ababab;
+border: 8px solid #ffffff;
+border-radius: 50%;
+box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+cursor: pointer;
+}
+.range-toggle:hover {
+background: #1c4f80;
+}
+.range-toggle-min {
+left: 0;
+}
+.range-toggle-max {
+left: 80%;
 }
