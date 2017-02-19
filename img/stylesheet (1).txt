@@ -1,0 +1,125 @@
+.icon {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.icon-basket {
+    width: 17px;
+    height: 16px;
+    background-position: -5px -5px;
+}
+
+.icon-bookmark {
+    width: 14px;
+    height: 16px;
+    background-position: -32px -5px;
+}
+
+.icon-check-off {
+    width: 23px;
+    height: 23px;
+    background-position: -56px -5px;
+}
+
+.icon-check-on {
+    width: 27px;
+    height: 23px;
+    background-position: -89px -5px;
+}
+
+.icon-circle {
+    width: 25px;
+    height: 25px;
+    background-position: -5px -38px;
+}
+
+.icon-circle-dot {
+    width: 25px;
+    height: 25px;
+    background-position: -40px -38px;
+}
+
+.icon-down-dir {
+    width: 11px;
+    height: 10px;
+    background-position: -75px -38px;
+}
+
+.icon-facebook {
+    width: 10px;
+    height: 18px;
+    background-position: -96px -38px;
+}
+
+.icon-home {
+    width: 15px;
+    height: 12px;
+    background-position: -75px -66px;
+}
+
+.icon-instagram {
+    width: 17px;
+    height: 17px;
+    background-position: -100px -66px;
+}
+
+.icon-left {
+    width: 22px;
+    height: 40px;
+    background-position: -126px -5px;
+}
+
+.icon-login {
+    width: 20px;
+    height: 17px;
+    background-position: -127px -55px;
+}
+
+.icon-logout {
+    width: 21px;
+    height: 17px;
+    background-position: -5px -82px;
+}
+
+.icon-phone {
+    width: 19px;
+    height: 19px;
+    background-position: -36px -82px;
+}
+
+.icon-right {
+    width: 22px;
+    height: 40px;
+    background-position: -127px -82px;
+}
+
+.icon-search {
+    width: 17px;
+    height: 17px;
+    background-position: -5px -132px;
+}
+
+.icon-up-dir {
+    width: 11px;
+    height: 10px;
+    background-position: -32px -132px;
+}
+
+.icon-user {
+    width: 20px;
+    height: 18px;
+    background-position: -53px -132px;
+}
+
+.icon-vk {
+    width: 20px;
+    height: 12px;
+    background-position: -83px -132px;
+}
+
+.icon-w {
+    width: 17px;
+    height: 17px;
+    background-position: -113px -132px;
+}
