@@ -780,6 +780,7 @@ footer, .navigation {
 	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: stretch;
+	align-content: space-between;
 	margin-bottom: 20px;
 }
 .products .item,
