@@ -81,14 +81,6 @@
           <form>
             <fieldset class="price-filter">
               <legend>Цена:</legend>
-              <div class="price-controls">
-                <label class="min-price">От
-				        <input type="text" name="min-price" value="0">
-				      </label>
-                <label class="max-price">До
-                <input type="text" name="max-price" value="30000">
-              </label>
-              </div>
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar"></div>
@@ -96,6 +88,13 @@
                 <div class="range-toggle range-toggle-min"></div>
                 <div class="range-toggle range-toggle-max"></div>
               </div>
+              <div class="price-controls">
+                <input type="text" name="min-price" id="min-price" value="0">
+                <label class="min-price" for="min-price">От</label>
+                <input type="text" name="max-price" id="max-price" value="30000">
+                <label class="max-price" for="max-price">До</label>
+              </div>
+
             </fieldset>
             <fieldset class="producer-filter">
               <legend>Производители:</legend>
