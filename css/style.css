@@ -1778,6 +1778,26 @@ input[type="checkbox"]:checked+label::before {
   width: 25px;
   height: 25px;
   background-position: -5px -38px;
+
+}
+.producer-filter label::before,
+.charging-filter label::before {
+		opacity: .5;
+}
+
+.producer-filter label:hover::before,
+.charging-filter label:hover::before {
+		opacity: 1;
+}
+input[type="checkbox"]:disabled + label,
+input[type="radio"]:disabled + label,
+.producer-filter label:disabled::before,
+.charging-filter label:disabled::before {
+		opacity: .2;
+}
+input[type="checkbox"]:disabled + label:hover::before,
+input[type="radio"]:disabled + label:hover::before {
+			opacity: .2;
 }
 input[type="radio"]:checked+label::before {
   width: 25px;
@@ -1887,3 +1907,64 @@ input[type="radio"]:checked+label::before {
 .range-toggle:hover {
   background: #1c4f80;
 }
+																															/*Modal-content*/
+/*.modal-content-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  display: none;
+  width: 766px;
+  height: 561px;
+  margin-top: -280px;
+  margin-left: -390px;
+
+  background: #e9e5dc url("img/map.png");
+  border: 7px solid white;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal-content-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+.modal-content-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+
+  width: 22px;
+  height: 22px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+  border-radius: 1px;
+}
+
+.modal-content-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+  transform: rotate(-45deg);
+}*/
