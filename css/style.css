@@ -131,6 +131,11 @@ body {
   height: 12px;
   background-position: -83px -132px;
 }
+.icon-w {
+    width: 17px;
+    height: 17px;
+    background-position: -113px -132px;
+}
 
 /*Header*/
 
@@ -267,13 +272,14 @@ footer, .navigation {
 }
 .order-buttons .navigation-icon:hover, label[for="search"]:hover {
   opacity: 1;
+	background-color: #212a3a;
 }
 .order-buttons .navigation-icon:active {
-  opacity: .5;
+  opacity: .7;
   background-color: #161d29;
 }
 .store-navigation .nav-search:focus~.search-icon::before {
-  background-position: -66px -109px;
+  background-position: -113px -132px;
 }
 .store-navigation .nav-order:hover {
   background-color: #5fbb2d;
@@ -664,6 +670,14 @@ footer, .navigation {
   line-height: 18px;
   padding: 10px;
   border-radius: 3px;
+}
+.slide-btn:hover,
+.universal-btn:hover {
+	background-color: #ca2c37;
+}
+.slide-btn:active,
+.universal-btn:active {
+	background-color: #ba2732;
 }
 .left-slider-part {
   width: 620px;
@@ -1057,6 +1071,9 @@ footer, .navigation {
 }
 .credit {
   background: #f1f5f7 url("../img/credit.png") right bottom no-repeat;
+}
+.credit .universal-btn {
+	width: 195px;
 }
 .services #serv-1:checked~.services-slides .delivery, #serv-2:checked~.services-slides .guarantee, #serv-3:checked~.services-slides .credit {
   display: flex;
@@ -1600,6 +1617,14 @@ footer, .navigation {
 .sorting .down::before {
   transform: rotate(180deg);
 }
+.sorting .up:hover::before,
+.sorting .down:hover::before {
+	 border-bottom: 9px solid #000;
+}
+.sorting .up:active::before,
+.sorting .down:active::before {
+	 border-bottom: 9px solid #ee3643;
+}
 .panavigation {
   margin: 0;
   margin-bottom: 54px;
@@ -1628,13 +1653,23 @@ footer, .navigation {
   text-decoration: none;
   text-align: center;
   vertical-align: middle;
-  border: 2px solid #e5e5e5;
+  border: 1px solid #e5e5e5;
   border-radius: 3px;
 }
 .panavigation a.active {
   background-color: #ee3643;
-  border: 2px solid #ee3643;
+  border: 1px solid #ee3643;
   color: #fff;
+}
+.panavigation a:hover {
+	  border: 1px solid #bdc6ca;
+		background-color: #fff;
+		color: #000;
+}
+.panavigation a:active {
+	  border: 1px solid #ee3643;
+		background-color: #fff;
+		color: #000;
 }
 .panavigation .next {
   padding-left: 30px;
